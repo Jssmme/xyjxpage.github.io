@@ -1,0 +1,262 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<style>
+.cent{
+height:100%;
+width:300px;
+margin:0 auto;
+}
+
+body{
+height:500px;
+}
+
+//div{font-size:90;}
+
+</style>
+
+<script>
+
+function cal()
+{
+
+var zq = document.getElementById("z1q").value;
+var gg = document.getElementById("g1g").value;
+var xl = document.getElementById("x1l").value;
+var sw = document.getElementById("s1w").value;
+var ds = document.getElementById("d1s").value;
+var cd = document.getElementById("c1d").value;
+var jd = document.getElementById("j1d").value+document.getElementById("j2d").value;
+var fs = document.getElementById("f1s").value+document.getElementById("f2s").value;
+var jf = document.getElementById("j1f").value+document.getElementById("j2f").value;
+var xx = document.getElementById("x2x").value;
+var hj = document.getElementById("h1j").value;
+
+var gj = zq*5+gg*4-sw*5*(1-jf);
+var ad = sw*5-gg*5-hj;
+
+document.getElementById("nsd").value = sw*15/(gj+ds/cd+ad*fs);
+document.getElementById("dsn").value = xl*(1+jd)*0.01/(ad-gj*xx);
+
+}
+</script>
+
+
+</head>
+
+<body>
+<div class="cent">
+<p>玄元天图计算器 14区墓啊墓制作</p>
+<p><font size="2">更新于2019.10.28，游戏版本号1246</font></p>
+
+<hr />
+<p>输入真气
+<input type="number" id="z1q" value="154782"></p>
+
+<p>输入根骨
+<input type="number" id="g1g" value="245572"></p>
+
+<p>输入血量
+<input type="number" id="x1l" value="2473189"></p>
+
+<hr />
+<p>敌人三维
+<input type="number" id="s1w" value="311000"></p>
+
+<hr />
+<p>道使攻击力
+<input type="number" id="d1s" value="52845"></p>
+
+<p>道使攻击CD
+<select id=c1d>
+<option value="1">每1回合攻击一次</option>
+<option value="2">每2回合攻击一次</option>
+<option value="3">每3回合攻击一次</option>
+</select>
+
+<p>道使加盾
+<input type="number" id="j1d" value="0"></p>
+</p>
+
+<p>道使反伤
+<input type="number" id="f1s" value="0"></p>
+
+<p>道使减防
+<input type="number" id="j1f" value="0"></p>
+
+<hr />
+<p>神级装备加盾
+<input type="number" id="j2d" value="0"></p>
+
+<p>神级装备吸血
+<input type="number" id="x2x" value="0"></p>
+
+<p>神级装备减防
+<input type="number" id="j2f" value="0"></p>
+
+<p>神级装备反伤
+<input type="number" id="f2s" value="0"></p>
+
+<hr />
+<p>魂戒减伤
+<input type="number" id="h1j" value="0"></p>
+
+<hr />
+
+<p><b>你击杀敌人需要 </b><input type="text" id="nsd"></p>
+<p><b>敌人击杀你需要 </b><input type="text" id="dsn"></p>
+
+<hr />
+
+<button onclick="cal()">计算</button>
+<hr />
+
+<table border="1">
+<tr>
+<td>天一</td>
+<td>41000</td>
+<td>·</td>
+<td>魔一</td>
+<td>44000</td>
+</tr>
+
+<tr>
+<td>天二</td>
+<td>51000</td><td>·</td>
+<td>魔二</td>
+<td>74000</td>
+</tr>
+
+<tr>
+<td>天三</td>
+<td>71000</td><td>·</td>
+<td>魔三</td>
+<td>134000</td>
+</tr>
+
+<tr>
+<td>天四</td>
+<td>101000</td><td>·</td>
+<td>魔四</td>
+<td>194000</td>
+</tr>
+
+<tr>
+<td>天五</td>
+<td>131000</td><td>·</td>
+<td>魔五</td>
+<td>254000</td>
+</tr>
+
+<tr>
+<td>天六</td>
+<td>161000</td><td>·</td>
+<td>魔六</td>
+<td>314000</td>
+</tr>
+
+<tr>
+<td>天七</td>
+<td>191000</td><td>·</td>
+<td>魔七</td>
+<td>374000</td>
+</tr>
+
+<tr>
+<td>天八</td>
+<td>221000</td><td>·</td>
+<td>魔八</td>
+<td>434000</td>
+</tr>
+
+<tr>
+<td>天九</td>
+<td>251000</td><td>·</td>
+<td>魔九</td>
+<td>494000</td>
+</tr>
+
+<tr>
+<td>天十</td>
+<td>281000</td><td>·</td>
+<td>缺省</td>
+<td>缺省</td>
+</tr>
+
+<tr>
+<td>天十一</td>
+<td>311000</td><td>·</td>
+<td>破碎一</td>
+<td>缺省</td>
+</tr>
+
+<tr>
+<td>天十二</td>
+<td>341000</td><td>·</td>
+<td>破碎二</td>
+<td>缺省</td>
+</tr>
+
+<tr>
+<td>天十三</td>
+<td>371000</td><td>·</td>
+<td>破碎三</td>
+<td>缺省</td>
+</tr>
+
+<tr>
+<td>天十四</td>
+<td>401000</td><td>·</td>
+<td>破碎四</td>
+<td>缺省</td>
+</tr>
+
+<tr>
+<td>天十五</td>
+<td>431000</td><td>·</td>
+<td>破碎五</td>
+<td>缺省</td>
+</tr>
+
+<tr>
+<td>天十六</td>
+<td>461000</td><td>·</td>
+<td>破碎六</td>
+<td>缺省</td>
+</tr>
+
+<tr>
+<td>天十七</td>
+<td>491000</td><td>·</td>
+<td>破碎七</td>
+<td>缺省</td>
+</tr>
+
+<tr>
+<td>天十八</td>
+<td>521000</td><td>·</td>
+<td>破碎八</td>
+<td>缺省</td>
+</tr>
+
+<tr>
+<td>天十九</td>
+<td>551000</td><td>·</td>
+<td>破碎九</td>
+<td>缺省</td>
+</tr>
+
+<tr>
+<td>天二十</td>
+<td>581000</td><td>·</td>
+<td>破碎十</td>
+<td>缺省</td>
+</tr>
+
+
+
+</div>
+</body>
+
+</html>
