@@ -1,7 +1,6 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 <style>
 .cent{
 height:100%;
@@ -13,14 +12,194 @@ body{
 height:500px;
 }
 
-//div{font-size:90;}
+
 
 </style>
 
 <script>
 
+function setCookie(cname,cvalue,exdays){
+	var d = new Date();
+	d.setTime(d.getTime()+(exdays*24*60*60*1000));
+	var expires = "expires="+d.toGMTString();
+	document.cookie = cname+"="+cvalue+"; "+expires;
+}
+function getCookie(cname){
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) {
+		var c = ca[i].trim();
+		if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+	}
+	return "";
+}
+
+
+function checkCookie() {
+  var user=getCookie("z0q");
+  if (user != "") {
+    document.getElementById("z1q").value = user;
+  } else {
+     user = document.getElementById("z1q").value;
+     if (user != "" && user != null) {
+       setCookie("z0q", user, 30);
+     }
+  }
+  
+  user=getCookie("g0g");
+  if (user != "") {
+    document.getElementById("g1g").value = user;
+  } else {
+     user = document.getElementById("g1g").value;
+     if (user != "" && user != null) {
+       setCookie("g0g", user, 30);
+     }
+  }
+
+  user=getCookie("x0l");
+  if (user != "") {
+    document.getElementById("x1l").value = user;
+  } else {
+     user = document.getElementById("x1l").value;
+     if (user != "" && user != null) {
+       setCookie("x0l", user, 30);
+     }
+  }
+  
+  user=getCookie("s0w");
+  if (user != "") {
+    document.getElementById("s1w").value = user;
+  } else {
+     user = document.getElementById("s1w").value;
+     if (user != "" && user != null) {
+       setCookie("s0w", user, 30);
+     }
+  }
+  
+    user=getCookie("d0s");
+  if (user != "") {
+    document.getElementById("d1s").value = user;
+  } else {
+     user = document.getElementById("d1s").value;
+     if (user != "" && user != null) {
+       setCookie("d0s", user, 30);
+     }
+  }
+  
+    user=getCookie("j0d");
+  if (user != "") {
+    document.getElementById("j1d").value = user;
+  } else {
+     user = document.getElementById("j1d").value;
+     if (user != "" && user != null) {
+       setCookie("j0d", user, 30);
+     }
+  }
+  
+    user=getCookie("f0s");
+  if (user != "") {
+    document.getElementById("f1s").value = user;
+  } else {
+     user = document.getElementById("f1s").value;
+     if (user != "" && user != null) {
+       setCookie("f0s", user, 30);
+     }
+  }
+  
+    user=getCookie("j0f");
+  if (user != "") {
+    document.getElementById("j1f").value = user;
+  } else {
+     user = document.getElementById("j1f").value;
+     if (user != "" && user != null) {
+       setCookie("j0f", user, 30);
+     }
+  }
+  
+    user=getCookie("j00d");
+  if (user != "") {
+    document.getElementById("j2d").value = user;
+  } else {
+     user = document.getElementById("j2d").value;
+     if (user != "" && user != null) {
+       setCookie("j00d", user, 30);
+     }
+  }
+  
+    user=getCookie("x00x");
+  if (user != "") {
+    document.getElementById("x2x").value = user;
+  } else {
+     user = document.getElementById("x2x").value;
+     if (user != "" && user != null) {
+       setCookie("x00x", user, 30);
+     }
+  }
+  
+    user=getCookie("j00f");
+  if (user != "") {
+    document.getElementById("j2f").value = user;
+  } else {
+     user = document.getElementById("j2f").value;
+     if (user != "" && user != null) {
+       setCookie("j00f", user, 30);
+     }
+  }
+  
+    user=getCookie("h0j");
+  if (user != "") {
+    document.getElementById("h1j").value = user;
+  } else {
+     user = document.getElementById("h1j").value;
+     if (user != "" && user != null) {
+       setCookie("h0j", user, 30);
+     }
+  }
+  
+  
+}
+
+
+
 function cal()
 {
+  
+  var user=getCookie("z0q");
+  user = document.getElementById("z1q").value;
+  setCookie("z0q", user, 30);
+   user=getCookie("g0g");
+  user = document.getElementById("g1g").value;
+  setCookie("g0g", user, 30);
+   user=getCookie("x0l");
+  user = document.getElementById("x1l").value;
+  setCookie("x0l", user, 30);
+   user=getCookie("s0w");
+  user = document.getElementById("s1w").value;
+  setCookie("s0w", user, 30);
+   user=getCookie("d0s");
+  user = document.getElementById("d1s").value;
+  setCookie("d0s", user, 30);
+   user=getCookie("j0d");
+  user = document.getElementById("j1d").value;
+  setCookie("j0d", user, 30);
+   user=getCookie("f0s");
+  user = document.getElementById("f1s").value;
+  setCookie("f0s", user, 30);
+   user=getCookie("j0f");
+  user = document.getElementById("j1f").value;
+  setCookie("j0f", user, 30);
+   user=getCookie("j00d");
+  user = document.getElementById("j2d").value;
+  setCookie("j00d", user, 30);
+   user=getCookie("x00x");
+  user = document.getElementById("x2x").value;
+  setCookie("x00x", user, 30);
+   user=getCookie("j00f");
+  user = document.getElementById("j2f").value;
+  setCookie("j00f", user, 30);
+   user=getCookie("h0j");
+  user = document.getElementById("h1j").value;
+  setCookie("h0j", user, 30);
 
 var zq = document.getElementById("z1q").value;
 var gg = document.getElementById("g1g").value;
@@ -46,11 +225,11 @@ document.getElementById("dsn").value = xl*(1+jd)*0.01/(ad-gj*xx);
 
 </head>
 
-<body>
+<body onload="checkCookie();">
 <div class="cent">
 <p>玄元天图计算器 14区墓啊墓制作</p>
-<p><font size="2">更新于2019.10.28，游戏版本号1246</font></p>
-
+<p><font size="2">更新于2019.10.30，游戏版本号1248</font></p>
+<hr />
 <hr />
 <p>输入真气
 <input type="number" id="z1q" value="154782"></p>
@@ -78,7 +257,7 @@ document.getElementById("dsn").value = xl*(1+jd)*0.01/(ad-gj*xx);
 
 <p>道使加盾
 <input type="number" id="j1d" value="0"></p>
-</p>
+
 
 <p>道使反伤
 <input type="number" id="f1s" value="0"></p>
@@ -110,150 +289,46 @@ document.getElementById("dsn").value = xl*(1+jd)*0.01/(ad-gj*xx);
 
 <hr />
 
-<button onclick="cal()">计算</button>
+<button onclick="cal();">计算</button>
 <hr />
-
-<table border="1">
-<tr>
-<td>天一</td>
-<td>41000</td>
-<td>·</td>
-<td>魔一</td>
-<td>44000</td>
-</tr>
-
-<tr>
-<td>天二</td>
-<td>51000</td><td>·</td>
-<td>魔二</td>
-<td>74000</td>
-</tr>
-
-<tr>
-<td>天三</td>
-<td>71000</td><td>·</td>
-<td>魔三</td>
-<td>134000</td>
-</tr>
-
-<tr>
-<td>天四</td>
-<td>101000</td><td>·</td>
-<td>魔四</td>
-<td>194000</td>
-</tr>
-
-<tr>
-<td>天五</td>
-<td>131000</td><td>·</td>
-<td>魔五</td>
-<td>254000</td>
-</tr>
-
-<tr>
-<td>天六</td>
-<td>161000</td><td>·</td>
-<td>魔六</td>
-<td>314000</td>
-</tr>
-
-<tr>
-<td>天七</td>
-<td>191000</td><td>·</td>
-<td>魔七</td>
-<td>374000</td>
-</tr>
-
-<tr>
-<td>天八</td>
-<td>221000</td><td>·</td>
-<td>魔八</td>
-<td>434000</td>
-</tr>
-
-<tr>
-<td>天九</td>
-<td>251000</td><td>·</td>
-<td>魔九</td>
-<td>494000</td>
-</tr>
-
-<tr>
-<td>天十</td>
-<td>281000</td><td>·</td>
-<td>缺省</td>
-<td>缺省</td>
-</tr>
-
-<tr>
-<td>天十一</td>
-<td>311000</td><td>·</td>
-<td>破碎一</td>
-<td>缺省</td>
-</tr>
-
-<tr>
-<td>天十二</td>
-<td>341000</td><td>·</td>
-<td>破碎二</td>
-<td>缺省</td>
-</tr>
-
-<tr>
-<td>天十三</td>
-<td>371000</td><td>·</td>
-<td>破碎三</td>
-<td>缺省</td>
-</tr>
-
-<tr>
-<td>天十四</td>
-<td>401000</td><td>·</td>
-<td>破碎四</td>
-<td>缺省</td>
-</tr>
-
-<tr>
-<td>天十五</td>
-<td>431000</td><td>·</td>
-<td>破碎五</td>
-<td>缺省</td>
-</tr>
-
-<tr>
-<td>天十六</td>
-<td>461000</td><td>·</td>
-<td>破碎六</td>
-<td>缺省</td>
-</tr>
-
-<tr>
-<td>天十七</td>
-<td>491000</td><td>·</td>
-<td>破碎七</td>
-<td>缺省</td>
-</tr>
-
-<tr>
-<td>天十八</td>
-<td>521000</td><td>·</td>
-<td>破碎八</td>
-<td>缺省</td>
-</tr>
-
-<tr>
-<td>天十九</td>
-<td>551000</td><td>·</td>
-<td>破碎九</td>
-<td>缺省</td>
-</tr>
-
-<tr>
-<td>天二十</td>
-<td>581000</td><td>·</td>
-<td>破碎十</td>
-<td>缺省</td>
-</tr>
+<table id="tfhover" class="tftable" border="1">
+<tr><th colspan="4">参考数据</th></tr>
+<tr><th>天1</th><th>41000</th><th>魔1</th><th>44000</th></tr>
+<tr><th>天2</th><th>51000</th><th>魔2</th><th>74000</th></tr>
+<tr><th>天3</th><th>71000</th><th>魔3</th><th>134000</th></tr>
+<tr><th>天4</th><th>101000</th><th>魔4</th><th>194000</th></tr>
+<tr><th>天5</th><th>131000</th><th>魔5</th><th>254000</th></tr>
+<tr><th>天6</th><th>161000</th><th>魔6</th><th>314000</th></tr>
+<tr><th>天7</th><th>191000</th><th>魔7</th><th>374000</th></tr>
+<tr><th>天8</th><th>221000</th><th>魔8</th><th>434000</th></tr>
+<tr><th>天9</th><th>251000</th><th>魔9</th><th>494000</th></tr>
+<tr><th>天10</th><th>281000</th><th>缺省</th><th>缺省</th></tr>
+<tr><th>天11</th><th>311000</th><th>天16</th><th>461000</th></tr>
+<tr><th>天12</th><th>341000</th><th>天17</th><th>491000</th></tr>
+<tr><th>天13</th><th>371000</th><th>天18</th><th>521000</th></tr>
+<tr><th>天14</th><th>401000</th><th>天19</th><th>551000</th></tr>
+<tr><th>天15</th><th>431000</th><th>天20</th><th>581000</th></tr>
+<tr><th>破1小</th><th>510000</th><th>破1大</th><th>560000</th></tr>
+<tr><th>破2小</th><th>590000</th><th>破2大</th><th>640000</th></tr>
+<tr><th>破3小</th><th>670000</th><th>破3大</th><th>720000</th></tr>
+<tr><th>破4小</th><th>750000</th><th>破4大</th><th>800000</th></tr>
+<tr><th>破5小</th><th>830000</th><th>破5大</th><th>880000</th></tr>
+<tr><th>破6小</th><th>910000</th><th>破6大</th><th>960000</th></tr>
+<tr><th>破7小</th><th>990000</th><th>破7大</th><th>1040000</th></tr>
+<tr><th>破8小</th><th>1070000</th><th>破8大</th><th>1120000</th></tr>
+<tr><th>破9小</th><th>1150000</th><th>破9大</th><th>1200000</th></tr>
+<tr><th>破10小</th><th>1230000</th><th>破10大</th><th>1280000</th></tr>
+<tr><th>破11小</th><th>1310000</th><th>破11大</th><th>1360000</th></tr>
+<tr><th>破12小</th><th>1390000</th><th>破12大</th><th>1440000</th></tr>
+<tr><th>破13小</th><th>1470000</th><th>破13大</th><th>1520000</th></tr>
+<tr><th>破14小</th><th>1550000</th><th>破14大</th><th>1600000</th></tr>
+<tr><th>破15小</th><th>1630000</th><th>破15大</th><th>1680000</th></tr>
+<tr><th>破16小</th><th>1710000</th><th>破16大</th><th>1760000</th></tr>
+<tr><th>破17小</th><th>1790000</th><th>破17大</th><th>1840000</th></tr>
+<tr><th>破18小</th><th>1870000</th><th>破18大</th><th>1920000</th></tr>
+<tr><th>破19小</th><th>1950000</th><th>破19大</th><th>2000000</th></tr>
+<tr><th>破20小</th><th>2030000</th><th>破20大</th><th>2080000</th></tr>
+  </table>
 
 
 
