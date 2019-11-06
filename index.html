@@ -166,6 +166,16 @@ function checkCookie() {
      }
   }
   
+  user=getCookie("j0n");
+  if (user != "") {
+    document.getElementById("j2n").value = user;
+  } else {
+     user = document.getElementById("j2n").value;
+     if (user != "" && user != null) {
+       setCookie("j0n", user, 30);
+     }
+  }
+  
 }
 
 
@@ -212,6 +222,9 @@ function cal()
   user=getCookie("j0c");
   user = document.getElementById("j1c").value;
   setCookie("j0c", user, 30);
+  user=getCookie("j0n");
+  user = document.getElementById("j2n").value;
+  setCookie("j0n", user, 30);
 
 var zq = document.getElementById("z1q").value;
 var gg = document.getElementById("g1g").value;
@@ -226,7 +239,21 @@ var xx = document.getElementById("x2x").value;
 var hj = document.getElementById("h1j").value;
 var jc = document.getElementById("j1c").value;
 
-var gj = jc*1+zq*5+gg*4-sw*5*(1-jf*1);
+var jn = document.getElementById("j1n").value;
+if (jn==1){
+  jn = gg*4;
+}else if (jn==2)
+{
+  jn = document.getElementById("j2n").value*4;
+}else if (jn==3)
+{
+  jn = gg*2+zq*2;
+}else if (jn==4)
+{
+  jn = gg*2+document.getElementById("j2n").value*2;
+}
+
+var gj = jc*1+zq*5+jn*1-sw*5*(1-jf*1);
 var ad = sw*5-gg*5-hj*1;
 
 document.getElementById("nsd").value = sw*15/(gj*1+ds*1/cd*1+ad*1*fs*1);
@@ -271,6 +298,19 @@ document.getElementById("jy2").value = ad*1;
 <p>种族额外
 <input type="number" id="j1c" value="2775"> <button onclick="alert('金木水火土人妖魔兽龙仙填对应boss的，如果下方校验数据出错，请核对敌人种族，可填0然后按照校验数据差距判断敌人种族')">?</button> </p>
 <hr />
+<p>选择技能
+  <select id=j1n>
+  <option value="1">黄龙浩气</option>
+  <option value="2">太乙生风</option>
+  <option value="2">五气连波</option>
+  <option value="3">万相神功</option>
+  <option value="4">一剑天罡</option>
+  <option value="4">大梵圣掌</option>
+  </select>
+  <button onclick="alert('选择你的技能，目前技能列表仅支持包含真气或根骨或体魄或身法四项参数相关的技能，未支持使用五行伤害的技能，如有需要，请联系我添加')">?</button></p>
+  <p>相关数值
+  <input type="number" id="j2n" value="0"> <button onclick="alert('此处填写体魄或身法，如果技能包括这两个其一的话，真气与根骨直接采用上方数值，无需重复填写')">?</button></p>
+<hr />
 <p>道使攻击力
 <input type="number" id="d1s" value="52845"> <button onclick="alert('填写道使攻击力，是当前护道的道使的攻击力，在道使页面点击道使查看')">?</button></p>
 
@@ -280,7 +320,7 @@ document.getElementById("jy2").value = ad*1;
 <option value="1">每1回合攻击一次</option>
 <option value="3">每3回合攻击一次</option>
 </select>
-<button onclick="alert('选道使攻击的cd，和道使攻击力查看地方相同')">?</button>
+<button onclick="alert('选道使攻击的cd，和道使攻击力查看地方相同')">?</button></p>
 <p>道使加盾
 <input type="number" id="j1d" value="0"> <button onclick="alert('填写道使天赋中加盾的系数，例如5%应当填写0.05，没有加盾技能就填0')">?</button></p>
 
