@@ -265,11 +265,13 @@ document.getElementById("jy2").value = ad*1;
 
 d1sn = Math.floor(d1sn*1);
 d2sn = Math.ceil(d1sn*1/cd*1);
-d3sn = Math.ceil((sw*15-d2sn*1*ds*1-d1sn*1*gj*1)/gj*1);
-
+d3sn = (sw*15-d2sn*1*ds*1-d1sn*1*gj*1)/gj*1;
+d4sn = d3sn-Math.floor(d3sn*1);
 
 document.getElementById("h1h").value = d1sn*1;
-document.getElementById("b1b").value = d3sn*1;
+document.getElementById("b1b").value = Math.ceil(d3sn*1);
+document.getElementById("h2h").value = d4sn;
+
 }
 </script>
 
@@ -279,17 +281,17 @@ document.getElementById("b1b").value = d3sn*1;
 <body onload="checkCookie();">
 <div class="cent">
 <p>玄元天图计算器 14区墓啊墓制作</p>
-<p><font size="2">更新于2019.11.3，游戏版本号1248</font></p>
+<p><font size="2">更新于2019.11.10，游戏版本号1249</font></p>
 <hr />
-欢迎加入玄元剑仙官服14区交流群，请在群内@我反馈问题或提出建议
+欢迎加入玄元剑仙官服14区交流群，请在群内私聊我反馈问题或提出建议
 群号810499024
 <p><a href="https://jq.qq.com/?_wv=1027&k=5ZS84pH">点击链接加群</a></p>
 <hr />
 
 <p><b>你击杀敌人 </b><input type="text" id="nsd" disabled="disabled"> <button onclick="alert('说明你击杀敌人需要打出大于该数字的正整数回合的伤害，例如10.5说明需要11回合的伤害')">?</button></p>
 <p><b>敌人击杀你 </b><input type="text" id="dsn" disabled="disabled"> <button onclick="alert('说明你能存活大于该数字的正整数回合，例如10.5说明你能存活11回合，想要过关必须在该回合数内打出上一个窗口的回合数，例如闪避敌人的攻击可以多存活1回合，打出暴击伤害可以多打1回合伤害')">?</button></p>
-<p>若你后出手，你需要在你能存活的<b><input type="text" id="h1h" disabled="disabled" style="border:0;width:20px;font-size:20px;color:red;"></b>回合内打出<input type="text" id="b1b" style="border:0;width:25px;font-size:20px;color:red;" disabled="disabled">次暴击伤害才能过关 <button onclick="alert('由于道使攻击不会暴击，只有角色会，所以此处数值相加后结果大于上面运算结果')">?</button></p>
-
+<p>若你后出手，你需要在你能存活的<b><input type="number" id="h1h" disabled="disabled" style="border:0;width:25px;font-size:20px;color:red;"></b>回合内打出<input type="text" id="b1b" style="border:0;width:25px;font-size:20px;color:red;" disabled="disabled">次暴击伤害才能过关 <button onclick="alert('由于道使攻击不会暴击，只有角色会，所以此处数值相加后结果大于上面运算结果')">?</button></p>
+<p>还差<input type="number" id="h2h" disabled="disabled">减少 <button onclick="alert('此处数字越接近0，表示当前属性越接近于少一回合暴击就能获胜，此处数字越接近1，表示当前属性离少一个回合暴击就能胜利还差得远')">?</button></p>
 <hr />
 
 <button onclick="cal();">计算</button>
