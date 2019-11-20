@@ -1,8 +1,8 @@
 <html>
-<head>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<style>
-.cent{
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<style>
+			.cent{
 height:100%;
 width:300px;
 margin:0 auto;
@@ -16,9 +16,9 @@ input {width: 80px;}
 
 </style>
 
-<script>
+		<script>
 
-function setCookie(cname,cvalue,exdays){
+			function setCookie(cname,cvalue,exdays){
 	var d = new Date();
 	d.setTime(d.getTime()+(exdays*24*60*60*1000));
 	var expires = "expires="+d.toGMTString();
@@ -262,6 +262,7 @@ document.getElementById("nsd").value = sw*15/(gj*1+ds*1/cd*1+ad*1*fs*1);
 document.getElementById("dsn").value = d1sn*1;
 document.getElementById("jy1").value = gj*1;
 document.getElementById("jy2").value = ad*1;
+document.getElementById("jy3").value = gj*2-jc*1;
 
 d1sn = Math.floor(d1sn*1);
 d2sn = Math.ceil(d1sn*1/cd*1);
@@ -272,145 +273,364 @@ document.getElementById("h1h").value = d1sn*1;
 document.getElementById("b1b").value = Math.ceil(d3sn*1);
 document.getElementById("h2h").value = d4sn;
 
+
 }
 </script>
 
 
-</head>
+	</head>
 
-<body onload="checkCookie();">
-<div class="cent">
-<p>玄元天图计算器 14区墓啊墓制作</p>
-<p><font size="2">更新于2019.11.10，游戏版本号1249</font></p>
-<hr />
-欢迎加入玄元剑仙官服14区交流群，请在群内私聊我反馈问题或提出建议
-群号810499024
-<p><a href="https://jq.qq.com/?_wv=1027&k=5ZS84pH">点击链接加群</a></p>
-<hr />
+	<body onload="checkCookie();">
+		<div class="cent">
+			<p>玄元天图计算器 14区墓啊墓制作</p>
+			<p>
+				<font size="2">更新于2019.11.20，游戏版本号1249</font>
+			</p>
+			<hr />
+			欢迎加入玄元剑仙官服14区交流群，请在群内私聊我反馈问题或提出建议
+			群号810499024
+			<p><a href="https://jq.qq.com/?_wv=1027&k=5ZS84pH">点击链接加群</a></p>
+			<hr />
 
-<p><b>你击杀敌人 </b><input type="text" id="nsd" disabled="disabled"> <button onclick="alert('说明你击杀敌人需要打出大于该数字的正整数回合的伤害，例如10.5说明需要11回合的伤害')">?</button></p>
-<p><b>敌人击杀你 </b><input type="text" id="dsn" disabled="disabled"> <button onclick="alert('说明你能存活大于该数字的正整数回合，例如10.5说明你能存活11回合，想要过关必须在该回合数内打出上一个窗口的回合数，例如闪避敌人的攻击可以多存活1回合，打出暴击伤害可以多打1回合伤害')">?</button></p>
-<p>若你后出手，你需要在你能存活的<b><input type="number" id="h1h" disabled="disabled" style="border:0;width:25px;font-size:20px;color:red;"></b>回合内打出<input type="text" id="b1b" style="border:0;width:25px;font-size:20px;color:red;" disabled="disabled">次暴击伤害才能过关 <button onclick="alert('由于道使攻击不会暴击，只有角色会，所以此处数值相加后结果大于上面运算结果')">?</button></p>
-<p>还差<input type="number" id="h2h" disabled="disabled">减少 <button onclick="alert('此处数字越接近0，表示当前属性越接近于少一回合暴击就能获胜，此处数字越接近1，表示当前属性离少一个回合暴击就能胜利还差得远')">?</button></p>
-<hr />
+			<p><b>你击杀敌人 </b><input type="text" id="nsd" disabled="disabled"> <button onclick="alert('说明你击杀敌人需要打出大于该数字的正整数回合的伤害，例如10.5说明需要11回合的伤害')">?</button></p>
+			<p><b>敌人击杀你 </b><input type="text" id="dsn" disabled="disabled"> <button onclick="alert('说明你能存活大于该数字的正整数回合，例如10.5说明你能存活11回合，想要过关必须在该回合数内打出上一个窗口的回合数，例如闪避敌人的攻击可以多存活1回合，打出暴击伤害可以多打1回合伤害')">?</button></p>
+			<p>若你后出手，你需要在你能存活的<b><input type="number" id="h1h" disabled="disabled" style="border:0;width:25px;font-size:20px;color:red;"></b>回合内打出<input
+				 type="text" id="b1b" style="border:0;width:25px;font-size:20px;color:red;" disabled="disabled">次暴击伤害才能过关 <button
+				 onclick="alert('由于道使攻击不会暴击，只有角色会，所以此处数值相加后结果大于上面运算结果')">?</button></p>
+			<p>还差<input type="number" id="h2h" disabled="disabled">减少 <button onclick="alert('此处数字越接近0，表示当前属性越接近于少一回合暴击就能获胜，此处数字越接近1，表示当前属性离少一个回合暴击就能胜利还差得远')">?</button></p>
+			<hr />
 
-<button onclick="cal();">计算</button>
-<hr />
-<p>输入真气
-<input type="number" id="z1q" value="196137"> <button onclick="alert('填写真气的值，不是攻击力，在神识入体的状态页面左列第一行')">?</button></p>
+			<button onclick="cal();">计算</button>
+			<hr />
+			<p>输入真气
+				<input type="number" id="z1q" value="326214"> <button onclick="alert('填写真气的值，不是攻击力，在神识入体的状态页面左列第一行')">?</button></p>
 
-<p>输入根骨
-<input type="number" id="g1g" value="316407"> <button onclick="alert('填写根骨的值，不是防御力，在神识入体的状态页面左列第二行')">?</button></p>
+			<p>输入根骨
+				<input type="number" id="g1g" value="429390"> <button onclick="alert('填写根骨的值，不是防御力，在神识入体的状态页面左列第二行')">?</button></p>
 
-<p>输入血量
-<input type="number" id="x1l" value="3651428"> <button onclick="alert('填写血量的值，不是体魄，因为有了法宝以后血量值计算不是简单的体魄*15，在神识入体的状态页面右列第三行')">?</button></p>
+			<p>输入血量
+				<input type="number" id="x1l" value="5211888"> <button onclick="alert('填写血量的值，不是体魄，因为有了法宝以后血量值计算不是简单的体魄*15，在神识入体的状态页面右列第三行')">?</button></p>
 
-<hr />
-<p>敌人三维
-<input type="number" id="s1w" value="401000"> <button onclick="alert('填写敌人三维值，网页下方有参考数据，如果有错请联系我修正')">?</button></p>
-<p>种族额外
-<input type="number" id="j1c" value="2895"> <button onclick="alert('金木水火土人妖魔兽龙仙填对应boss的，如果下方校验数据出错，请核对敌人种族，可填0然后按照校验数据差距判断敌人种族')">?</button> </p>
-<hr />
-<p>选择技能
-  <select id=j1n>
-  <option value="1">黄龙浩气</option>
-  <option value="2">太乙生风</option>
-  <option value="2">五气连波</option>
-  <option value="3">万相神功</option>
-  <option value="4">一剑天罡</option>
-  <option value="4">大梵圣掌</option>
-  </select>
-  <button onclick="alert('选择你的技能，目前技能列表仅支持包含真气或根骨或体魄或身法四项参数相关的技能，未支持使用五行伤害的技能，如有需要，请联系我添加')">?</button></p>
-  <p>相关数值
-  <input type="number" id="j2n" value="0"> <button onclick="alert('此处填写体魄或身法，如果技能包括这两个其一的话，真气与根骨直接采用上方数值，无需重复填写')">?</button></p>
-<hr />
-<p>道使攻击力
-<input type="number" id="d1s" value="61920"> <button onclick="alert('填写道使攻击力，是当前护道的道使的攻击力，在道使页面点击道使查看')">?</button></p>
+			<hr />
+			<p>敌人三维
+				<input type="number" id="s1w" value="564000"> <button onclick="alert('填写敌人三维值，网页下方有参考数据，如果有错请联系我修正')">?</button></p>
+			<p>种族额外
+				<input type="number" id="j1c" value="1600"> <button onclick="alert('金木水火土人妖魔兽龙仙填对应boss的，如果下方校验数据出错，请核对敌人种族，可填0然后按照校验数据差距判断敌人种族')">?</button>
+			</p>
+			<hr />
+			<p>选择技能
+				<select id=j1n>
+					<option value="1">黄龙浩气</option>
+					<option value="2">太乙生风</option>
+					<option value="2">五气连波</option>
+					<option value="3">万相神功</option>
+					<option value="4">一剑天罡</option>
+					<option value="4">大梵圣掌</option>
+				</select>
+				<button onclick="alert('选择你的技能，目前技能列表仅支持包含真气或根骨或体魄或身法四项参数相关的技能，未支持使用五行伤害的技能，如有需要，请联系我添加')">?</button></p>
+			<p>相关数值
+				<input type="number" id="j2n" value="0"> <button onclick="alert('此处填写体魄或身法，如果技能包括这两个其一的话，真气与根骨直接采用上方数值，无需重复填写')">?</button></p>
+			<hr />
+			<p>道使攻击力
+				<input type="number" id="d1s" value="181125"> <button onclick="alert('填写道使攻击力，是当前护道的道使的攻击力，在道使页面点击道使查看')">?</button></p>
 
-<p>道使攻击CD
-<select id=c1d>
-<option value="2">每2回合攻击一次</option>
-<option value="1">每1回合攻击一次</option>
-<option value="3">每3回合攻击一次</option>
-</select>
-<button onclick="alert('选道使攻击的cd，和道使攻击力查看地方相同')">?</button></p>
-<p>道使加盾
-<input type="number" id="j1d" value="0"> <button onclick="alert('填写道使天赋中加盾的系数，例如5%应当填写0.05，没有加盾技能就填0')">?</button></p>
-
-
-<p>道使反伤
-<input type="number" id="f1s" value="0"> <button onclick="alert('填写道使天赋中反伤的系数，例如5%应当填写0.05，没有反伤技能就填0')">?</button></p>
-
-<p>道使减防
-<input type="number" id="j1f" value="0"> <button onclick="alert('填写道使天赋中减防的系数，例如5%应当填写0.05，没有减防技能就填0')">?</button></p>
-
-<hr />
-<p>神级装备加盾
-<input type="number" id="j2d" value="0"> <button onclick="alert('破碎以后的玩家填写，填写装备中所有带有加盾技能的系数总和，例如5%和3%应当填写0.08，没有就填0')">?</button></p>
-
-<p>神级装备吸血
-<input type="number" id="x2x" value="0"> <button onclick="alert('破碎以后的玩家填写，填写装备中所有带有吸血技能的系数总和，例如5%和3%应当填写0.08，没有就填0')">?</button></p>
-
-<p>神级装备减防
-<input type="number" id="j2f" value="0"> <button onclick="alert('破碎以后的玩家填写，填写装备中所有带有减防技能的系数总和，例如5%和3%应当填写0.08，没有就填0')">?</button></p>
-
-<p>神级装备反伤
-<input type="number" id="f2s" value="0"> <button onclick="alert('破碎以后的玩家填写，填写装备中所有带有反伤技能的系数总和，例如5%和3%应当填写0.08，没有就填0')">?</button></p>
-
-<hr />
-<p>魂戒减伤
-<input type="number" id="h1j" value="0"> <button onclick="alert('破碎以后的玩家填写，填写魂戒减伤的值，没有就填0')">?</button></p>
-<hr />
-<p>
-校验数据 <button onclick="alert('校验窗口,此处的数据应当和你实际战斗时双方各自普攻的伤害值，如果正确，说明计算正确，如果有误，请联系我修正')">?</button>
-</p>
-<p>你普攻敌人伤害应该为 <input type="text" id="jy1" disabled="disabled"></p>
-<p>敌人普攻你伤害应该为 <input type="text" id="jy2" disabled="disabled"></p>
+			<p>道使攻击CD
+				<select id=c1d>
+					<option value="2">每2回合攻击一次</option>
+					<option value="1">每1回合攻击一次</option>
+					<option value="3">每3回合攻击一次</option>
+				</select>
+				<button onclick="alert('选道使攻击的cd，和道使攻击力查看地方相同')">?</button></p>
+			<p>道使加盾
+				<input type="number" id="j1d" value="0"> <button onclick="alert('填写道使天赋中加盾的系数，例如5%应当填写0.05，没有加盾技能就填0')">?</button></p>
 
 
-<hr />
-<table id="tfhover" class="tftable" border="1" fontstye="none">
-<tr><th colspan="5">参考数据 <button onclick="alert('如果有误请联系我修正')">?</button></th></tr>
-<tr><td>天1</td><td>41000</td><td>·</td><td>魔1</td><td>44000</td></tr>
-<tr><td>天2</td><td>51000</td><td>·</td><td>魔2</td><td>74000</td></tr>
-<tr><td>天3</td><td>71000</td><td>·</td><td>魔3</td><td>134000</td></tr>
-<tr><td>天4</td><td>101000</td><td>·</td><td>魔4</td><td>194000</td></tr>
-<tr><td>天5</td><td>131000</td><td>·</td><td>魔5</td><td>254000</td></tr>
-<tr><td>天6</td><td>161000</td><td>·</td><td>魔6</td><td>314000</td></tr>
-<tr><td>天7</td><td>191000</td><td>·</td><td>魔7</td><td>374000</td></tr>
-<tr><td>天8</td><td>221000</td><td>·</td><td>魔8</td><td>434000</td></tr>
-<tr><td>天9</td><td>251000</td><td>·</td><td>魔9</td><td>494000</td></tr>
-<tr><td>天10</td><td>281000</td><td>·</td><td>缺省</td><td>缺省</td></tr>
-<tr><td>天11</td><td>311000</td><td>·</td><td>天16</td><td>461000</td></tr>
-<tr><td>天12</td><td>341000</td><td>·</td><td>天17</td><td>491000</td></tr>
-<tr><td>天13</td><td>371000</td><td>·</td><td>天18</td><td>521000</td></tr>
-<tr><td>天14</td><td>401000</td><td>·</td><td>天19</td><td>551000</td></tr>
-<tr><td>天15</td><td>431000</td><td>·</td><td>天20</td><td>581000</td></tr>
-<tr><td>破1小</td><td>510000</td><td>·</td><td>破1大</td><td>560000</td></tr>
-<tr><td>破2小</td><td>590000</td><td>·</td><td>破2大</td><td>640000</td></tr>
-<tr><td>破3小</td><td>670000</td><td>·</td><td>破3大</td><td>720000</td></tr>
-<tr><td>破4小</td><td>750000</td><td>·</td><td>破4大</td><td>800000</td></tr>
-<tr><td>破5小</td><td>830000</td><td>·</td><td>破5大</td><td>880000</td></tr>
-<tr><td>破6小</td><td>910000</td><td>·</td><td>破6大</td><td>960000</td></tr>
-<tr><td>破7小</td><td>990000</td><td>·</td><td>破7大</td><td>1040000</td></tr>
-<tr><td>破8小</td><td>1070000</td><td>·</td><td>破8大</td><td>1120000</td></tr>
-<tr><td>破9小</td><td>1150000</td><td>·</td><td>破9大</td><td>1200000</td></tr>
-<tr><td>破10小</td><td>1230000</td><td>·</td><td>破10大</td><td>1280000</td></tr>
-<tr><td>破11小</td><td>1310000</td><td>·</td><td>破11大</td><td>1360000</td></tr>
-<tr><td>破12小</td><td>1390000</td><td>·</td><td>破12大</td><td>1440000</td></tr>
-<tr><td>破13小</td><td>1470000</td><td>·</td><td>破13大</td><td>1520000</td></tr>
-<tr><td>破14小</td><td>1550000</td><td>·</td><td>破14大</td><td>1600000</td></tr>
-<tr><td>破15小</td><td>1630000</td><td>·</td><td>破15大</td><td>1680000</td></tr>
-<tr><td>破16小</td><td>1710000</td><td>·</td><td>破16大</td><td>1760000</td></tr>
-<tr><td>破17小</td><td>1790000</td><td>·</td><td>破17大</td><td>1840000</td></tr>
-<tr><td>破18小</td><td>1870000</td><td>·</td><td>破18大</td><td>1920000</td></tr>
-<tr><td>破19小</td><td>1950000</td><td>·</td><td>破19大</td><td>2000000</td></tr>
-<tr><td>破20小</td><td>2030000</td><td>·</td><td>破20大</td><td>2080000</td></tr>
-  </table>
+			<p>道使反伤
+				<input type="number" id="f1s" value="0"> <button onclick="alert('填写道使天赋中反伤的系数，例如5%应当填写0.05，没有反伤技能就填0')">?</button></p>
+
+			<p>道使减防
+				<input type="number" id="j1f" value="0"> <button onclick="alert('填写道使天赋中减防的系数，例如5%应当填写0.05，没有减防技能就填0')">?</button></p>
+
+			<hr />
+			<p>神级装备加盾
+				<input type="number" id="j2d" value="0"> <button onclick="alert('破碎以后的玩家填写，填写装备中所有带有加盾技能的系数总和，例如5%和3%应当填写0.08，没有就填0')">?</button></p>
+
+			<p>神级装备吸血
+				<input type="number" id="x2x" value="0"> <button onclick="alert('破碎以后的玩家填写，填写装备中所有带有吸血技能的系数总和，例如5%和3%应当填写0.08，没有就填0')">?</button></p>
+
+			<p>神级装备减防
+				<input type="number" id="j2f" value="0"> <button onclick="alert('破碎以后的玩家填写，填写装备中所有带有减防技能的系数总和，例如5%和3%应当填写0.08，没有就填0')">?</button></p>
+
+			<p>神级装备反伤
+				<input type="number" id="f2s" value="0"> <button onclick="alert('破碎以后的玩家填写，填写装备中所有带有反伤技能的系数总和，例如5%和3%应当填写0.08，没有就填0')">?</button></p>
+
+			<hr />
+			<p>魂戒减伤
+				<input type="number" id="h1j" value="0"> <button onclick="alert('破碎以后的玩家填写，填写魂戒减伤的值，没有就填0')">?</button></p>
+			<hr />
+			<p>
+				校验数据 <button onclick="alert('校验窗口,此处的数据应当和你实际战斗时双方各自普攻的伤害值，如果正确，说明计算正确，如果有误，请联系我修正')">?</button>
+			</p>
+			<p>你普攻敌人伤害应该为 <input type="text" id="jy1" disabled="disabled"></p>
+			<p>你暴击时的伤害应该为 <input type="text" id="jy3" disabled="disabled"></p>
+			<p>敌人普攻你伤害应该为 <input type="text" id="jy2" disabled="disabled"></p>
+
+
+			<hr />
+			<table id="tfhover" class="tftable" border="1" fontstye="none">
+				<tr>
+					<th colspan="5">参考数据 <button onclick="alert('如果有误请联系我修正')">?</button></th>
+				</tr>
+				<tr>
+					<td>天1</td>
+					<td>41000</td>
+					<td>·</td>
+					<td>魔1</td>
+					<td>44000</td>
+				</tr>
+				<tr>
+					<td>天2</td>
+					<td>51000</td>
+					<td>·</td>
+					<td>魔2</td>
+					<td>74000</td>
+				</tr>
+				<tr>
+					<td>天3</td>
+					<td>71000</td>
+					<td>·</td>
+					<td>魔3</td>
+					<td>134000</td>
+				</tr>
+				<tr>
+					<td>天4</td>
+					<td>101000</td>
+					<td>·</td>
+					<td>魔4</td>
+					<td>194000</td>
+				</tr>
+				<tr>
+					<td>天5</td>
+					<td>131000</td>
+					<td>·</td>
+					<td>魔5</td>
+					<td>254000</td>
+				</tr>
+				<tr>
+					<td>天6</td>
+					<td>161000</td>
+					<td>·</td>
+					<td>魔6</td>
+					<td>314000</td>
+				</tr>
+				<tr>
+					<td>天7</td>
+					<td>191000</td>
+					<td>·</td>
+					<td>魔7</td>
+					<td>374000</td>
+				</tr>
+				<tr>
+					<td>天8</td>
+					<td>221000</td>
+					<td>·</td>
+					<td>魔8</td>
+					<td>434000</td>
+				</tr>
+				<tr>
+					<td>天9</td>
+					<td>251000</td>
+					<td>·</td>
+					<td>魔9</td>
+					<td>494000</td>
+				</tr>
+				<tr>
+					<td>天10</td>
+					<td>281000</td>
+					<td>·</td>
+					<td>缺省</td>
+					<td>缺省</td>
+				</tr>
+				<tr>
+					<td>天11</td>
+					<td>311000</td>
+					<td>·</td>
+					<td>天16</td>
+					<td>461000</td>
+				</tr>
+				<tr>
+					<td>天12</td>
+					<td>341000</td>
+					<td>·</td>
+					<td>天17</td>
+					<td>491000</td>
+				</tr>
+				<tr>
+					<td>天13</td>
+					<td>371000</td>
+					<td>·</td>
+					<td>天18</td>
+					<td>521000</td>
+				</tr>
+				<tr>
+					<td>天14</td>
+					<td>401000</td>
+					<td>·</td>
+					<td>天19</td>
+					<td>551000</td>
+				</tr>
+				<tr>
+					<td>天15</td>
+					<td>431000</td>
+					<td>·</td>
+					<td>天20</td>
+					<td>564000</td>
+				</tr>
+				<tr>
+					<td>破1小</td>
+					<td>510000</td>
+					<td>·</td>
+					<td>破1大</td>
+					<td>560000</td>
+				</tr>
+				<tr>
+					<td>破2小</td>
+					<td>590000</td>
+					<td>·</td>
+					<td>破2大</td>
+					<td>640000</td>
+				</tr>
+				<tr>
+					<td>破3小</td>
+					<td>670000</td>
+					<td>·</td>
+					<td>破3大</td>
+					<td>720000</td>
+				</tr>
+				<tr>
+					<td>破4小</td>
+					<td>750000</td>
+					<td>·</td>
+					<td>破4大</td>
+					<td>800000</td>
+				</tr>
+				<tr>
+					<td>破5小</td>
+					<td>830000</td>
+					<td>·</td>
+					<td>破5大</td>
+					<td>880000</td>
+				</tr>
+				<tr>
+					<td>破6小</td>
+					<td>910000</td>
+					<td>·</td>
+					<td>破6大</td>
+					<td>960000</td>
+				</tr>
+				<tr>
+					<td>破7小</td>
+					<td>990000</td>
+					<td>·</td>
+					<td>破7大</td>
+					<td>1040000</td>
+				</tr>
+				<tr>
+					<td>破8小</td>
+					<td>1070000</td>
+					<td>·</td>
+					<td>破8大</td>
+					<td>1120000</td>
+				</tr>
+				<tr>
+					<td>破9小</td>
+					<td>1150000</td>
+					<td>·</td>
+					<td>破9大</td>
+					<td>1200000</td>
+				</tr>
+				<tr>
+					<td>破10小</td>
+					<td>1230000</td>
+					<td>·</td>
+					<td>破10大</td>
+					<td>1280000</td>
+				</tr>
+				<tr>
+					<td>破11小</td>
+					<td>1310000</td>
+					<td>·</td>
+					<td>破11大</td>
+					<td>1360000</td>
+				</tr>
+				<tr>
+					<td>破12小</td>
+					<td>1390000</td>
+					<td>·</td>
+					<td>破12大</td>
+					<td>1440000</td>
+				</tr>
+				<tr>
+					<td>破13小</td>
+					<td>1470000</td>
+					<td>·</td>
+					<td>破13大</td>
+					<td>1520000</td>
+				</tr>
+				<tr>
+					<td>破14小</td>
+					<td>1550000</td>
+					<td>·</td>
+					<td>破14大</td>
+					<td>1600000</td>
+				</tr>
+				<tr>
+					<td>破15小</td>
+					<td>1630000</td>
+					<td>·</td>
+					<td>破15大</td>
+					<td>1680000</td>
+				</tr>
+				<tr>
+					<td>破16小</td>
+					<td>1710000</td>
+					<td>·</td>
+					<td>破16大</td>
+					<td>1760000</td>
+				</tr>
+				<tr>
+					<td>破17小</td>
+					<td>1790000</td>
+					<td>·</td>
+					<td>破17大</td>
+					<td>1840000</td>
+				</tr>
+				<tr>
+					<td>破18小</td>
+					<td>1870000</td>
+					<td>·</td>
+					<td>破18大</td>
+					<td>1920000</td>
+				</tr>
+				<tr>
+					<td>破19小</td>
+					<td>1950000</td>
+					<td>·</td>
+					<td>破19大</td>
+					<td>2000000</td>
+				</tr>
+				<tr>
+					<td>破20小</td>
+					<td>2030000</td>
+					<td>·</td>
+					<td>破20大</td>
+					<td>2080000</td>
+				</tr>
+			</table>
 
 
 
-</div>
-</body>
+		</div>
+	</body>
 
 </html>
